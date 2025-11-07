@@ -94,11 +94,11 @@ ul li:last-child {
     padding-bottom: 0;
 }
 
-/* --- NUEVO CÓDIGO para el libro animado en CADA LÍNEA --- */
+/* --- NUEVO CÓDIGO para el libro animado en CADA LÍNEA (URL CORREGIDA) --- */
 ul li::before {
     content: ''; /* Obligatorio para pseudo-elementos */
     
-    /* URL del libro animado (del sitio de Blanca) */
+    /* URL del libro animado (CORREGIDA) */
     background-image: url('https://blancayamilet1.github.io/Blanca-Yamilet-Gutierrez-Llave/portafolio.gif');
     
     background-size: contain;
