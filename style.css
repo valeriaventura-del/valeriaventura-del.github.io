@@ -1,11 +1,13 @@
+/* Estilo Minimalista (Claro con acentos de color) */
 
+/* Estilos generales del cuerpo */
 body {
     background-color: #f4f4f4; /* Fondo gris muy claro */
     color: #333; /* Color de texto principal (oscuro) */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px; /* Añade un poco de padding alrededor */
+    padding: 20px; 
 }
 
 /* Contenedor principal */
@@ -19,25 +21,25 @@ header {
     text-align: center;
     border-bottom: 2px solid #ddd; /* Línea divisoria sutil */
     padding-bottom: 20px;
-    margin-bottom: 40px; /* Más espacio después del header */
+    margin-bottom: 40px; 
 }
 
 header h1 {
     color: #000; /* Título principal en negro */
     margin: 0;
     font-size: 2.2em;
-    font-weight: 600; /* Un poco más delgado */
+    font-weight: 600; 
 }
 
 header .cita {
-    color: #555; /* Color de la cita (gris oscuro) */
+    color: #00796B; /* NUEVO COLOR: Acento teal para la cita */
     font-style: italic;
     font-size: 1.1em;
     margin-top: 10px;
     font-weight: 300; /* Más ligero */
 }
 
-/* Secciones */
+/* Secciones (Marcos/Tarjetas) */
 section {
     background-color: #ffffff; /* Fondo blanco para las tarjetas */
     margin-top: 25px;
@@ -48,11 +50,11 @@ section {
 }
 
 section h2 {
-    color: #2c3e50; /* Un azul corporativo oscuro */
+    color: #00796B; /* NUEVO COLOR: Acento teal para los subtítulos */
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     margin-top: 0;
-    font-weight: 500; /* Peso medio */
+    font-weight: 500; 
 }
 
 /* Listas */
@@ -68,57 +70,63 @@ ul li {
     border-bottom: 1px solid #f0f0f0; /* Separador sutil entre ítems */
 }
 
-/* Quita el borde del último ítem de la lista */
 ul li:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
 
 ul li strong {
-    color: #333;
-    font-weight: 500; /* Peso medio para las etiquetas */
-    margin-right: 8px; /* Espacio después de la etiqueta */
+    color: #00796B; /* NUEVO COLOR: Acento teal para las etiquetas (Ej: "Fecha de Nacimiento:") */
+    font-weight: 500; 
+    margin-right: 8px; 
 }
 
 /* Enlaces */
 a {
-    color: #007BFF; /* Azul estándar de enlace */
+    color: #007BFF; /* Azul estándar de enlace (se mantiene) */
     text-decoration: none;
     font-weight: 500;
 }
 
 a:hover {
-    text-decoration: underline; /* Subrayado clásico al pasar el mouse */
+    text-decoration: underline; 
     color: #0056b3; /* Azul más oscuro al pasar */
 }
 
 /* --- Estilos para la sección de Cursos (Minimalista) --- */
 
-/* Ordena verticalmente curso y profesor */
 #cursos ul li {
     display: flex;
     flex-direction: column;
     gap: 4px; /* Espacio pequeño entre título y profesor */
 }
 
-/* Estilo para el título del curso */
 #cursos .curso-titulo {
     font-size: 1.1em;
-    font-weight: 600; /* Más importante */
-    color: #333;
+    font-weight: 600; 
+    color: #333; /* Título del curso se mantiene oscuro */
 }
 
-/* Estilo para el enlace del profesor/material */
 #cursos .profesor-nombre {
     font-size: 0.95em;
-    font-style: normal; /* Quitamos itálica */
-    font-weight: 400; /* Peso normal */
-    color: #007BFF; /* Color de enlace */
+    font-style: normal; 
+    font-weight: 400; 
+    color: #555; /* Gris para el nombre (si no es enlace) */
 }
+
+/* Si el nombre del profesor es un enlace */
+#cursos a.profesor-nombre {
+    color: #007BFF; /* Se mantiene azul */
+}
+#cursos a.profesor-nombre:hover {
+    color: #0056b3;
+}
+
 
 /* Estilo para enlaces en sección Compañeros */
 #companeros ul li a {
     font-weight: 600; /* Nombres de compañeros más marcados */
+    color: #007BFF; /* Se mantiene azul */
 }
 
 /* Pie de página */
