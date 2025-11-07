@@ -183,3 +183,15 @@ footer {
     font-size: 0.9em;
     color: #777; 
 }
+
+/* --- CÓDIGO AÑADIDO: Estilos para la Foto de Perfil --- */
+.profile-pic {
+    width: 150px; /* Tamaño de la foto */
+    height: 150px; /* Asegura que sea un círculo si border-radius es 50% */
+    border-radius: 50%; /* Hace la foto redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    margin: 20px auto 15px auto; /* Centra y añade espacio arriba y abajo */
+    display: block; /* Para que margin: auto funcione */
+    border: 3px solid #007bff; /* Borde azul para destacar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
