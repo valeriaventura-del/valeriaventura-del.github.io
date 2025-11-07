@@ -1,0 +1,91 @@
+/* Estilos generales del cuerpo */
+body {
+    background-color: #1a1a2e; /* Fondo oscuro (azul marino/púrpura) */
+    color: #e0e0e0; /* Color de texto principal (gris claro) */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal para centrar el contenido */
+main, header, footer {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenido */
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    border-bottom: 2px solid #4a4a70; /* Línea divisoria */
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+header h1 {
+    color: #ffffff; /* Título principal en blanco */
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header .cita {
+    color: #f9a826; /* Color de la cita (dorado/naranja) */
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Secciones */
+section {
+    background-color: #2a2a4e; /* Fondo ligeramente más claro para las secciones */
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+section h2 {
+    color: #f9a826; /* Color de los subtítulos */
+    border-bottom: 1px solid #4a4a70;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Listas */
+ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+ul li {
+    background-color: #3a3a6e; /* Fondo para cada ítem de la lista */
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+ul li strong {
+    color: #e0e0e0;
+}
+
+/* Enlaces */
+a {
+    color: #80d0ff; /* Color de enlaces (azul claro) */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #ffffff;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #4a4a70;
+    font-size: 0.9em;
+    color: #aaa;
+}
