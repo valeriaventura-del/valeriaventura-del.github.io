@@ -1,6 +1,6 @@
 body {
-    background-color: #f4f4f4; /* Fondo gris muy claro */
-    color: #333; /* Color de texto principal (oscuro) */
+    background-color: #f4f4f4; 
+    color: #333; 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -10,49 +10,65 @@ body {
 /* Contenedor principal */
 main, header, footer {
     max-width: 800px;
-    margin: 0 auto; /* Centra el contenido */
+    margin: 0 auto; 
 }
 
 /* Encabezado */
 header {
     text-align: center;
-    border-bottom: 2px solid #ddd; /* Línea divisoria sutil */
+    border-bottom: 2px solid #ddd; 
     padding-bottom: 20px;
     margin-bottom: 40px; 
 }
 
+/* --- MODIFICACIÓN TÍTULO PRINCIPAL --- */
 header h1 {
-    color: #000; /* Título principal en negro */
+    color: #9c27b0; /* Color púrpura (como los títulos de sección) */
     margin: 0;
-    font-size: 2.2em;
+    font-size: 2.5em; /* Un poco más grande */
     font-weight: 600; 
 }
 
 header .cita {
-    color: #00796B; /* NUEVO COLOR: Acento teal para la cita */
+    color: #007bff; /* Azul brillante para la cita */
     font-style: italic;
     font-size: 1.1em;
     margin-top: 10px;
-    font-weight: 300; /* Más ligero */
+    font-weight: 400; 
 }
 
 /* Secciones (Marcos/Tarjetas) */
 section {
-    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    background-color: #ffffff; 
     margin-top: 25px;
     padding: 30px;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
-    border: 1px solid #eee; /* Borde ligero */
+    border-radius: 10px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); 
+    border: 1px solid #e0e0e0; 
 }
 
+/* --- MODIFICACIÓN TÍTULOS DE SECCIÓN (para alinear logos) --- */
 section h2 {
-    color: #00796B; /* NUEVO COLOR: Acento teal para los subtítulos */
-    border-bottom: 1px solid #eee;
+    color: #9c27b0; /* Púrpura suave */
+    border-bottom: 1px solid #f0f0f0; 
     padding-bottom: 10px;
     margin-top: 0;
-    font-weight: 500; 
+    font-weight: 600; 
+    letter-spacing: 0.5px; 
+    
+    /* Nuevas propiedades para alinear el logo */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre el logo y el texto */
 }
+
+/* --- NUEVA CLASE para los logos de sección --- */
+.section-icon {
+    width: 30px;  /* Tamaño del logo de gorro/grupo */
+    height: 30px;
+    object-fit: contain; /* Para que la imagen se ajuste bien */
+}
+
 
 /* Listas */
 ul {
@@ -60,11 +76,17 @@ ul {
     padding: 0;
 }
 
+/* --- MODIFICACIÓN LÍNEAS DE LISTA (para añadir libro animado) --- */
 ul li {
-    background-color: transparent; /* Sin fondo de ítem */
-    padding: 12px 0; /* Solo padding vertical */
+    background-color: transparent; 
+    padding: 14px 0; 
     margin-bottom: 0;
-    border-bottom: 1px solid #f0f0f0; /* Separador sutil entre ítems */
+    border-bottom: 1px solid #f0f0f0; 
+    
+    /* Nuevas propiedades para hacer espacio al logo */
+    position: relative; /* Necesario para el pseudo-elemento */
+    padding-left: 35px; /* Espacio a la izquierda para el libro */
+    min-height: 20px; /* Altura mínima para alinear el logo */
 }
 
 ul li:last-child {
@@ -72,48 +94,72 @@ ul li:last-child {
     padding-bottom: 0;
 }
 
+/* --- NUEVO CÓDIGO para el libro animado en CADA LÍNEA --- */
+ul li::before {
+    content: ''; /* Obligatorio para pseudo-elementos */
+    
+    /* URL del libro animado (del sitio de Blanca) */
+    background-image: url('https://blancayamilet1.github.io/Blanca-Yamilet-Gutierrez-Llave/portafolio.gif');
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Posición y tamaño del libro */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste fino de centrado */
+}
+
+
 ul li strong {
-    color: #00796B; /* NUEVO COLOR: Acento teal para las etiquetas (Ej: "Fecha de Nacimiento:") */
-    font-weight: 500; 
-    margin-right: 8px; 
+    color: #00bf8f; /* Verde lima/menta para las etiquetas */
+    font-weight: 600; 
+    margin-right: 10px; 
 }
 
 /* Enlaces */
 a {
-    color: #007BFF; /* Azul estándar de enlace (se mantiene) */
+    color: #007bff; /* Azul brillante */
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease; 
 }
 
 a:hover {
     text-decoration: underline; 
-    color: #0056b3; /* Azul más oscuro al pasar */
+    color: #0056b3; 
 }
 
-/* --- Estilos para la sección de Cursos (Minimalista) --- */
-
+/* Estilos para la sección de Cursos */
 #cursos ul li {
     display: flex;
     flex-direction: column;
-    gap: 4px; /* Espacio pequeño entre título y profesor */
+    gap: 6px; 
+    padding-left: 35px; /* Asegura que el padding se aplique también aquí */
 }
 
+/* (El ::before se hereda, así que no hay que repetirlo) */
+
+
 #cursos .curso-titulo {
-    font-size: 1.1em;
-    font-weight: 600; 
-    color: #333; /* Título del curso se mantiene oscuro */
+    font-size: 1.15em; 
+    font-weight: 700; 
+    color: #333; 
 }
 
 #cursos .profesor-nombre {
     font-size: 0.95em;
     font-style: normal; 
     font-weight: 400; 
-    color: #555; /* Gris para el nombre (si no es enlace) */
+    color: #555; 
 }
 
-/* Si el nombre del profesor es un enlace */
 #cursos a.profesor-nombre {
-    color: #007BFF; /* Se mantiene azul */
+    color: #007bff; 
 }
 #cursos a.profesor-nombre:hover {
     color: #0056b3;
@@ -122,15 +168,18 @@ a:hover {
 
 /* Estilo para enlaces en sección Compañeros */
 #companeros ul li a {
-    font-weight: 600; /* Nombres de compañeros más marcados */
-    color: #007BFF; /* Se mantiene azul */
+    font-weight: 600; 
+    color: #007bff; 
 }
+
+/* (El ::before también se aplica a los compañeros) */
 
 /* Pie de página */
 footer {
     text-align: center;
     margin-top: 50px;
-    padding-top: 20px;
+    padding-top: 25px; 
+    border-top: 1px solid #eee; 
     font-size: 0.9em;
-    color: #888; /* Gris claro */
+    color: #777; 
 }
